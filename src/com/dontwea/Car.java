@@ -1,6 +1,6 @@
 package com.dontwea;
 
-public class Car {
+public class Car extends Voertuig {
     private Wheel leftWheel;
     private Wheel rightWheel;
 
@@ -19,14 +19,17 @@ public class Car {
         this.rightWheel = new Wheel(10);
     }
 
-    public void StartCar()
+    @Override
+    public void Start()
     {
         this.leftWheel.StartWheel();
         this.rightWheel.StartWheel();
     }
 
-    public void StopCar()
+    @Override
+    public void Stop()
     {
+
         this.leftWheel.StopWheel();
         this.rightWheel.StopWheel();
     }
